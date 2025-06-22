@@ -1,1 +1,42 @@
-SOCKS5 192.168.110.243:9998;
+ config_name: yx1605
+ token: vnt1111
+ name: win-2203
+ ip: 10.26.0.115
+ in_ips: 
+   - "192.168.0.0/24,10.26.0.22"
+   - "192.168.12.0/24,10.26.0.22"
+   - "192.168.110.0/24,10.26.0.42"   
+   #- "192.168.110.0/24,10.26.0.111"  
+ out_ips:
+  - 0.0.0.0/0
+   
+ password:   yxwsh
+ #server_address:   ws://vnt.wherewego.top:29872
+ server_address:  nat.iron-all.online:29872
+ server_encrypt:   true
+ cipher_model:   aes_gcm
+ protocol:   WS
+
+ stun_server:
+   - stun.freeswitch.org:3478
+   - stun.miwifi.com
+   - stun.chat.bilibili.com
+   - stun.hitv.com
+   - stun.cdnbye.com   
+   - stun1.l.google.com:19302
+   - stun2.l.google.com:19302
+
+ parallel: 4                   #任务并行度 （默认，7621cpu 默认即可，多核cpu可自行增加测试最佳速度）
+ mtu:   1410
+# tcp: true                       #tcp模式
+ punch_model: all
+   #punch:   ipv4             打洞模式 （默认使用ipv4地址尝试打洞p2p，若无法打洞成功p2p，有ipv6地址的可使用ipv6，注意ipv4速度比ipv6速度更快）
+ use_channel:   all
+ compressor:   none
+ finger:   false              #关闭数据指纹
+ port :   0,0,0,0,0                         #使用随机端口（默认无需修改）表示tcp监听一个未使用的端口，udp监听两个未使用的端口
+ device_name: vEthernet(vnt)      #网卡名称
+
+ allow_wire_guard:   true
+ cmd:   true                 #关闭控制台输入
+ no_proxy:    false      #是否关闭内置代理，true为关闭（默认false启用，如果使用true关闭，速度会更快，但要额外输入nat命令下方有介绍）
