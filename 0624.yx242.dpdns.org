@@ -1,0 +1,14 @@
+为 yx242-0624 添加公共主机名
+
+将隧道路由到公共主机名。这些是您所有的使用 Cloudflare 作为权威 DNS 名称服务器的应用程序。
+
+子域		域(必填)			路径
+0624	.	yx242.dpdns.org	/	（可选）路径
+
+将创建 0624.yx242.dpdns.org 的 DNS 记录
+
+服务  
+类型(必填)   		URL(必填)
+HTTP		://	localhost:56123
+
+vlpt="" vmpt="56123" hypt="" tupt="" argo="y" agn="0624.yx242.dpdns.org" agk="eyJhIjoiNDhhZGQ4Zjc0ZTMwNTFlOTYzYjgwZDdiZGE1MTljOTAiLCJ0IjoiODI5NGFhNDktZjhjYy00NWYyLWE0ZjEtYjIzMzViMzQzZDJhIiwicyI6Ill6WTRPVEZpWXpFdFpqQmpNUzAwTUdOaUxXSTROV0l0WVRSaVpXUm1aVE01WkRnMiJ9" bash <(curl -Ls https://raw.githubusercontent.com/zzzhhh1/argosb/main/argosb.sh)
